@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steven Duong | Data Analytics &amp; Data Science</title>
+<meta name="description" content="Portfolio of Steven Duong, SFU computer science student looking for data analytics and data science roles. Projects, resume and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef2f7;
+    --surface: #ffffff;
+    --ink: #15203a;
+    --muted: #55607a;
+    --line: #d5dce8;
+    --accent: #2b57e0;
+    --accent-ink: #ffffff;
+    --focus: #2b57e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1626;
+      --surface: #172038;
+      --ink: #e8edf8;
+      --muted: #9aa6c2;
+      --line: #28334f;
+      --accent: #7c9cff;
+      --accent-ink: #0f1626;
+      --focus: #7c9cff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top { padding: 1.25rem 0; }
+  header.top nav { display: flex; gap: 1.5rem; justify-content: flex-end; font-weight: 500; }
+  header.top a { text-decoration: none; color: var(--muted); }
+  header.top a:hover { color: var(--ink); }
+
+  .hero { padding: 4rem 0 3.5rem; }
+  .hero h1 {
+    font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin: 0 0 1.5rem;
+  }
+  .hero p { font-size: 1.25rem; max-width: 34em; color: var(--muted); margin: 0 0 2rem; }
+  .hero p strong { color: var(--ink); font-weight: 500; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn {
+    display: inline-block; padding: 0.7rem 1.3rem; border-radius: 999px;
+    font-weight: 500; text-decoration: none; border: 1.5px solid var(--ink);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn.primary:hover { filter: brightness(1.1); }
+  .btn.ghost:hover { background: var(--surface); }
+
+  section { padding: 3rem 0; }
+  h2 {
+    font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+    font-size: 2rem; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 0.5rem;
+  }
+  .sub { color: var(--muted); margin: 0 0 2rem; }
+
+  .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .project {
+    display: flex; flex-direction: column; gap: 0.75rem;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 1.4rem; text-decoration: none; min-height: 220px;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .project:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .project h3 {
+    font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+    font-size: 1.3rem; line-height: 1.2; margin: 0;
+  }
+  .project p { margin: 0; color: var(--muted); font-size: 1rem; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0; }
+  .tags li {
+    font-size: 0.85rem; padding: 0.15rem 0.6rem; border-radius: 6px;
+    background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+  }
+  .view { font-weight: 500; color: var(--accent); font-size: 0.95rem; }
+
+  .about { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+  .about p { max-width: 38em; margin: 0 0 1rem; }
+  .skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .skills li { padding: 0.25rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 0.95rem; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 2rem; padding: 2.5rem 0 3rem; color: var(--muted); }
+  footer .links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 1rem; }
+  footer a { color: var(--ink); font-weight: 500; }
+
+  @media (min-width: 760px) { .about { grid-template-columns: 1.5fr 1fr; gap: 3rem; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Steven Duong</h1>
+      <p>
+        I'm a fifth-year <strong>computer science</strong> student at <strong>Simon Fraser University</strong> who likes working with data and figuring out how things work.
+        I'm looking for <strong>data analytics</strong> and <strong>data science</strong> roles.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="Resume_2026.pdf" target="_blank" rel="noopener">View resume</a>
+        <a class="btn ghost" href="https://github.com/StevenDuong04" target="_blank" rel="noopener">GitHub profile</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="sub">Select a project to see the code on GitHub.</p>
+ 
+      <div class="projects">
+ 
+        <a class="project" href="https://github.com/StevenDuong04/Sales-Intelligence-Dashboard" target="_blank" rel="noopener">
+          <h3>Sales Intelligence Dashboard</h3>
+          <p>A self-service analytics app for small businesses. Upload a CSV or Excel sales file and it cleans the data, calculates KPIs like revenue, average order value and growth, and builds interactive charts for products, customers and trends. No SQL needed.</p>
+          <ul class="tags"><li>Python</li><li>Streamlit</li><li>Pandas</li><li>Plotly</li></ul>
+          <span class="view">View on GitHub</span>
+        </a>
+ 
+        <a class="project" href="https://github.com/StevenDuong04/CMPT310-Project" target="_blank" rel="noopener">
+          <h3>Career Path Recommender</h3>
+          <p>A machine learning app that predicts the top 3 career paths from a student's grades and study habits. Built with a team of four for CMPT 310 (AI). Uses 35+ engineered features and a LightGBM model that reached about 90% test accuracy.</p>
+          <ul class="tags"><li>Python</li><li>LightGBM</li><li>scikit-learn</li><li>Streamlit</li></ul>
+          <span class="view">View on GitHub</span>
+        </a>
+ 
+        <a class="project" href="https://github.com/StevenDuong04/BUS336_Project" target="_blank" rel="noopener">
+          <h3>BUS336: Visualization and Analysis</h3>
+          <p>Data cleaning, analysis and forecasting on a bioretention condition assessment dataset from City Studio, written in R for SFU's BUS 336 course.</p>
+          <ul class="tags"><li>R</li><li>Data cleaning</li><li>Visualization</li><li>Forecasting</li></ul>
+          <span class="view">View on GitHub</span>
+        </a>
+ 
+        <a class="project" href="https://github.com/StevenDuong04/SFU-Marketplace" target="_blank" rel="noopener">
+          <h3>SFU Marketplace</h3>
+          <p>A full-stack marketplace web app for SFU students, built with a team. React frontend, Flask API, MySQL database running in Docker, and real-time features with Socket.IO.</p>
+          <ul class="tags"><li>React</li><li>Flask</li><li>MySQL</li><li>Docker</li></ul>
+          <span class="view">View on GitHub</span>
+        </a>
+ 
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I'm finishing my computer science degree at <strong>Simon Fraser University</strong>. I like working with data and figuring out how things work, whether that means digging into a dataset to see what's really going on or tracing why a system behaves the way it does.</p>
+          <p>Outside of school, I run my own <strong>detailing business</strong>. Running it myself has taught me how to handle customers, scheduling, and quality on my own, and how to follow through on the details.</p>
+          <p>I'm looking for <strong>data analytics and data science</strong> roles. When I'm not coding or detailing, you'll find me bouldering.</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 0.75rem;font-size:1.1rem;">Skills</h3>
+          <ul class="skills">
+            <li>Python</li><li>SQL</li><li>Pandas</li><li>Data visualization</li><li>Git</li><li>NumPy</li> <li>scikit-learn</li><li>R</li><li>Streamlit</li><li>Flask</li><li>React</li><li>Docker</li>
+            <li>Tableau</li><li>Excel</li><li>Data cleaning</li><li>Data analysis</li><li>Machine learning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>Want to talk about a role or a project? Email me.</p>
+    <div class="links">
+      <a href="mailto:vduong.steven@gmail.com">vduong.steven@gmail.com</a>
+      <a href="https://github.com/StevenDuong04" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/steven-duong-a5371a2a1" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Resume_2026.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+    <small>&copy; 2026 Steven Duong</small>
+  </div>
+</footer>
+
+</body>
+</html>
